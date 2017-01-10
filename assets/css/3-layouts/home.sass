@@ -1,0 +1,38 @@
+.home-wrap
+    display: flex
+
+    @media (max-width: 790px)
+        display: block
+.home-sections
+    flex: 1
+section
+    padding: 50px 0px
+.flex
+    display: flex
+    flex-direction: row
+.flex--center
+    justify-content: center
+.flex--space-around
+    justify-content: space-around
+.col-1
+    max-width: 300px
+    margin: 0 20px
+
+.col-2
+    max-width: 640px
+    margin: 0 20px
+
+.col-50
+    width: 50%
+
+       
+.order-first
+    order: -1
+@media(max-width: 640px)
+    .home-sections, .flex
+        display: block
+    .col-1
+        max-width: 100%
+    .col-50
+        width: auto
+        
