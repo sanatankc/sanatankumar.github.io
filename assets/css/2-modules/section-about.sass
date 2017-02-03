@@ -1,11 +1,28 @@
-section.about
+#about
     background:
         image: url("/assets/img/me-bg.png")
-        position: bottom right
-        color: $yellow
-        size: 30% auto
         repeat: no-repeat
-
-@media(max-width: 1080px)
-    section.about
-        background-position: bottom right
+        attachment: fixed
+        size: 40%
+        position: right bottom
+        color: $yellow
+    width: 100%
+    height: 500px
+    .col-1
+        padding-top: 90px
+        h2
+            margin-bottom: 20px
+            display: inline
+            background: darken($yellow, 8%)
+        hr
+            margin-bottom: 7px
+            width: 220px
+        p
+            margin-top: 0px
+            display: inline
+            background: darken($yellow, 8%)
+            font:
+                size: 20px
+    ::selection
+            background: #444
+            color: $yellow

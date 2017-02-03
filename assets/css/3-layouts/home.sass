@@ -1,38 +1,102 @@
-.home-wrap
-    display: flex
-
-    @media (max-width: 790px)
-        display: block
 .home-sections
-    flex: 1
-section
-    padding: 50px 0px
+    margin-left: 150px
+    &:nth-child(even)
+        ::selection
+            background: $yellow
+            color: #444
+
 .flex
     display: flex
-    flex-direction: row
 .flex--center
     justify-content: center
-.flex--space-around
+    .col-1
+        margin-right: 70px
+.flex--span
     justify-content: space-around
 .col-1
     max-width: 300px
-    margin: 0 20px
 
-.col-2
-    max-width: 640px
-    margin: 0 20px
-
-.col-50
-    width: 50%
-
-       
-.order-first
-    order: -1
-@media(max-width: 640px)
-    .home-sections, .flex
+@media (max-width: 780px)
+    .flex, .home-sections
         display: block
+    .col-1:nth-child(1)
+        margin-bottom: 40px
+    .home-sections
+        margin-left: 0px
+    .header
+        width: 100%
+        height: auto
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        // text-align: center
+        background-color: #222
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)
+        nav
+            margin-top: 50px
+            display: none
+            &.open
+                display: block
+            a.active
+                color: #fff
+        .logo
+            margin: 0 20px
+            background: 
+                image: url("/assets/img/logo.svg")
+            &:hover
+                background:
+                    image: url("/assets/img/logo.svg")
+        a
+            display: none
+    #about
+        background-attachment: scroll
+        padding: 0 0px
+        .flex
+            display: block
+    .flex
+        display: flex
+        flex-direction: column
+    .flex--span
+        align-items: center
+        justify-content: center
+
+
+    .mobile-nav-toggle
+        width: 30px
+        height: 27px
+        padding: 10px
+        border-radius: 50%
+        background-color: $yellow
+        display: flex
+        flex-direction: column
+        cursor: pointer
+        justify-content: space-between
+        transition: all 1.2s ease-in-out
+        margin-right: 20px
+        margin-top: 10px
+        &.open span.main
+            margin-left: 40px
+            background: transparent
+        &.open span.before,
+        &.open span.after
+            transform-origin: center
+            transform: rotate(135deg)
+            top: 10px
+            left: 0px
+        &.open span.after
+            transform: rotate(-135deg)
+            left: 0px
+            top: -15px
+            bottom: 10px
+        span
+            content: ""
+            display:block
+            height: 2px
+            border-radius: 10px
+            background: #111
+            position: relative
+            transition: all 0.3s ease-in-out
+
+@media (max-width: 400px)
     .col-1
-        max-width: 100%
-    .col-50
-        width: auto
-        
+        max-width: calc(100% - 20px)
