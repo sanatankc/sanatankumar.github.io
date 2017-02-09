@@ -478,7 +478,8 @@ h2.lead-text {
 p.main {
   margin-bottom: 4px;
   font-size: 18px;
-  font-family: system;}
+  font-family: 'Fira Sans', sans-serif;
+;}
 
 a.cta {
   color: #444;
@@ -497,7 +498,7 @@ body {
   background: #F6F6F8;
   font-size: 14px;
   line-height: 1.6;
-  font-family: system, sans-serif;
+  font-family: 'Fira Sans', sans-serif;
   color: #2E2D33;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%; }
